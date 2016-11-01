@@ -3,6 +3,7 @@ using System.Diagnostics;
 
 namespace Vsite.CSharp
 {
+    // TODO: Definirati da klasa Osoba implementira sučelje IEquatable<Osoba>
     public class Osoba
     {
         public Osoba(string ime, int matičniBroj)
@@ -14,7 +15,10 @@ namespace Vsite.CSharp
         string m_ime;       // član referentnog tipa
         int m_matičniBroj;  // član vrijednosnog tipa
 
-        // TODO: Pregaziti (override) metodu Equals tako da za osobe s istim imenom i istim matičnim brojem rezultat bude true
+        // TODO: Implementirati metodu Equals(Osoba) iz sučelja IEquatable<Osoba> tako da za osobe s istim imenom i istim matičnim brojem rezultat bude true
+
+
+        // TODO: Pregaziti (override) metodu Equals(object) tako da poziva Equals(Osoba)
         public override bool Equals(object obj)
         {
             if (obj == null)
@@ -57,6 +61,9 @@ namespace Vsite.CSharp
                 Console.WriteLine("POGREŠKA: osobaB je null referenca pa nema metodu Equals!");
             }
 
+            // poziv statičke metode
+            Console.WriteLine(Osoba.Equals(osobaA, osobaB));
+
             Console.WriteLine(Osoba.ReferenceEquals(osobaA, osobaB));
         }
 
@@ -86,6 +93,12 @@ namespace Vsite.CSharp
             osobaB = new Osoba("Janko", 1);
             UsporedbaOsoba(osobaA, osobaB);
             Console.WriteLine();
+
+            Console.WriteLine("Usporedba bezimene osobe s osobom koja ima ime:");
+            osobaB = new Osoba(null, 2);
+            UsporedbaOsoba(osobaA, osobaB);
+            Console.WriteLine();
+
 
             Console.WriteLine("GOTOVO!!!");
             Console.ReadKey();

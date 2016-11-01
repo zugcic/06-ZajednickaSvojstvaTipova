@@ -20,6 +20,7 @@ namespace Vsite.CSharp.Testovi
 
             Assert.AreEqual(false, cw.GetBoolean());
             Assert.AreEqual(false, cw.GetBoolean());
+            Assert.AreEqual(false, cw.GetBoolean());
             Assert.IsTrue(cw.IsEmpty);
         }
     }

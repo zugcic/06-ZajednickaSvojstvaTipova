@@ -3,36 +3,7 @@ using System.Diagnostics;
 
 namespace Vsite.CSharp
 {
-    //public class Osoba
-    //{
-    //    public Osoba(string ime, int matičniBroj)
-    //    {
-    //        m_ime = ime;
-    //        m_matičniBroj = matičniBroj;
-    //    }
-
-    //    string m_ime;       // član referentnog tipa
-    //    int m_matičniBroj;  // član vrijednosnog tipa
-
-    //    // TODO: prekopirati kod metode Equals iz zadatka MetodaEqualsReferentiTip
-    //    public override bool Equals(object obj)
-    //    {
-    //        if (obj == null)
-    //            return false;
-    //        if (obj.GetType() != GetType())
-    //            return false;
-    //        Osoba druga = (Osoba)obj;
-    //        if (!Osoba.Equals(m_ime, druga.m_ime))
-    //            return false;
-    //        return m_matičniBroj.Equals(druga.m_matičniBroj);
-    //    }
-
-    //    public override string ToString()
-    //    {
-    //        return string.Format("'{0}, {1}'", m_ime, m_matičniBroj);
-    //    }
-    //}
-
+    // TODO:  Definirati da klasa Student implementira sučelje IEquatable<Student>
     public class Student : Osoba
     {
         public Student(string ime, int matičniBroj, string smjer, int godina) : base(ime, matičniBroj)
@@ -44,7 +15,10 @@ namespace Vsite.CSharp
         string m_smjer;
         int m_godina;
 
-        // TODO: Pregaziti (override) metodu Equals da uključi dodatne usporedbe da bi studenti bili jednaki samo ako su na istom smjeru i godini.
+        // TODO: Implementirati metodu Equals(Student) iz sučelja IEquatable<Student> da uključi dodatne usporedbe da bi studenti bili jednaki samo ako su na istom smjeru i godini.
+
+
+        // TODO: Pregaziti (override) metodu Equals(object) tako da poziva metodu Equals(Student).
         public override bool Equals(object obj) 
         {
             if (!base.Equals(obj)) // prvo pozivamo Equals baznog tipa

@@ -69,9 +69,9 @@
       <Project>{1875db6f-1083-4677-aff7-c06701be3386}</Project>
       <Name>MetodaEqualsZaIzvedeniReferentiTip</Name>
     </ProjectReference>
-    <ProjectReference Include="..\EqualsVrijednTip\EqualsVrijednTip.csproj">
+    <ProjectReference Include="..\EqualsVrijednTip\MetodaEqualsZaVrijednosniTip.csproj">
       <Project>{53d14d11-8d55-4c13-ae4a-9ac78b5e8c96}</Project>
-      <Name>EqualsVrijednTip</Name>
+      <Name>MetodaEqualsZaVrijednosniTip</Name>
     </ProjectReference>
     <ProjectReference Include="..\GetHashCodeString\GetHashCodeString.csproj">
       <Project>{ed5914b2-9512-4ebe-a101-9e0138224c8b}</Project>

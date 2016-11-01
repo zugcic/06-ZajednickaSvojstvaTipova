@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_", "_", "{E6E10ADA-753A-43
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetodaEqualsZaIzvedeniReferentiTip", "EqualsRefTip2\MetodaEqualsZaIzvedeniReferentiTip.csproj", "{1875DB6F-1083-4677-AFF7-C06701BE3386}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EqualsVrijednTip", "EqualsVrijednTip\EqualsVrijednTip.csproj", "{53D14D11-8D55-4C13-AE4A-9AC78B5E8C96}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetodaEqualsZaVrijednosniTip", "EqualsVrijednTip\MetodaEqualsZaVrijednosniTip.csproj", "{53D14D11-8D55-4C13-AE4A-9AC78B5E8C96}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsporedbaRef", "UsporedbaRef\UsporedbaRef.csproj", "{22C2E2F5-1CF7-421D-8481-6591F17B1224}"
 EndProject

@@ -5,19 +5,18 @@ using Vsite.CSharp;
 namespace Vsite.CSharp.Testovi
 {
     [TestClass]
-    public class TestEqualsZaIzvedeniReferentiTip : ConsoleTest
+    public class TestEqualsZaIzvedeniReferentiTip
     {
         [TestMethod]
         public void EqualsZaIzvedeniReferentiTip_UsporedbaReferenciNaIstiObjektUvijekVraćaTrue()
         {
             Student s1 = new Student("Janko", 1, "računarstvo", 3);
             Student s2 = s1;
-            MetodaEqualsZaIzvedeniReferentiTip.UsporedbaStudenata(s1, s2);
-            Assert.AreEqual(s1.ToString(), ((Student)cw.GetObject()).ToString());
-            Assert.AreEqual(s2.ToString(), ((Student)cw.GetObject()).ToString());
-            Assert.IsTrue(cw.GetBoolean());
-            Assert.IsTrue(cw.GetBoolean());
-            Assert.IsTrue(cw.GetBoolean());
+
+            Assert.IsTrue(s1.Equals(s2));
+            Assert.IsTrue(s2.Equals(s1));
+            Assert.IsTrue(Osoba.Equals(s1, s2));
+            Assert.IsTrue(Osoba.ReferenceEquals(s1, s2));
         }
 
         [TestMethod]
@@ -25,12 +24,11 @@ namespace Vsite.CSharp.Testovi
         {
             Student s1 = new Student("Janko", 1, "računarstvo", 3);
             Student s2 = new Student("Janko", 1, "elektronika", 3);
-            MetodaEqualsZaIzvedeniReferentiTip.UsporedbaStudenata(s1, s2);
-            Assert.AreEqual(s1.ToString(), ((Student)cw.GetObject()).ToString());
-            Assert.AreEqual(s2.ToString(), ((Student)cw.GetObject()).ToString());
-            Assert.IsFalse(cw.GetBoolean());
-            Assert.IsFalse(cw.GetBoolean());
-            Assert.IsFalse(cw.GetBoolean());
+
+            Assert.IsFalse(s1.Equals(s2));
+            Assert.IsFalse(s2.Equals(s1));
+            Assert.IsFalse(Osoba.Equals(s1, s2));
+            Assert.IsFalse(Osoba.ReferenceEquals(s1, s2));
         }
 
         [TestMethod]
@@ -38,12 +36,23 @@ namespace Vsite.CSharp.Testovi
         {
             Student s1 = new Student("Janko", 1, "računarstvo", 3);
             Student s2 = new Student("Janko", 1, "računarstvo", 3);
-            MetodaEqualsZaIzvedeniReferentiTip.UsporedbaStudenata(s1, s2);
-            Assert.AreEqual(s1.ToString(), ((Student)cw.GetObject()).ToString());
-            Assert.AreEqual(s2.ToString(), ((Student)cw.GetObject()).ToString());
-            Assert.IsTrue(cw.GetBoolean());
-            Assert.IsTrue(cw.GetBoolean());
-            Assert.IsFalse(cw.GetBoolean());
+
+            Assert.IsTrue(s1.Equals(s2));
+            Assert.IsTrue(s2.Equals(s1));
+            Assert.IsTrue(Osoba.Equals(s1, s2));
+            Assert.IsFalse(Osoba.ReferenceEquals(s1, s2));
+        }
+
+        [TestMethod]
+        public void EqualsZaIzvedeniReferentiTip_UsporedbaDvijeRazličiteOsobeSIstogSmjeraIGodineVraćaFalse()
+        {
+            Student s1 = new Student("Janko", 1, "računarstvo", 3);
+            Student s2 = new Student("Marko", 3, "računarstvo", 3);
+
+            Assert.IsFalse(s1.Equals(s2));
+            Assert.IsFalse(s2.Equals(s1));
+            Assert.IsFalse(Osoba.Equals(s1, s2));
+            Assert.IsFalse(Osoba.ReferenceEquals(s1, s2));
         }
     }
 }

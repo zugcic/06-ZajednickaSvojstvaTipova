@@ -5,19 +5,18 @@ using Vsite.CSharp;
 namespace Vsite.CSharp.Testovi
 {
     [TestClass]
-    public class TestEqualsZaReferentniTip : ConsoleTest
+    public class TestEqualsZaReferentniTip
     {
         [TestMethod]
         public void EqualsZaReferentniTip_UsporedbaReferenciNaIstiObjektUvijekVraćaTrue()
         {
             Osoba o1 = new Osoba("Janko", 1);
             Osoba o2 = o1;
-            MetodaEqualsZaReferentniTip.UsporedbaOsoba(o1, o2);
-            Assert.AreEqual(o1.ToString(), ((Osoba)cw.GetObject()).ToString());
-            Assert.AreEqual(o2.ToString(), ((Osoba)cw.GetObject()).ToString());
-            Assert.IsTrue(cw.GetBoolean());
-            Assert.IsTrue(cw.GetBoolean());
-            Assert.IsTrue(cw.GetBoolean());
+
+            Assert.IsTrue(o1.Equals(o2));
+            Assert.IsTrue(o2.Equals(o1));
+            Assert.IsTrue(Osoba.Equals(o1, o2));
+            Assert.IsTrue(Osoba.ReferenceEquals(o1, o2));
         }
 
         [TestMethod]
@@ -25,12 +24,11 @@ namespace Vsite.CSharp.Testovi
         {
             Osoba o1 = new Osoba("Janko", 1);
             Osoba o2 = new Osoba("Marko", 2);
-            MetodaEqualsZaReferentniTip.UsporedbaOsoba(o1, o2);
-            Assert.AreEqual(o1.ToString(), ((Osoba)cw.GetObject()).ToString());
-            Assert.AreEqual(o2.ToString(), ((Osoba)cw.GetObject()).ToString());
-            Assert.IsFalse(cw.GetBoolean());
-            Assert.IsFalse(cw.GetBoolean());
-            Assert.IsFalse(cw.GetBoolean());
+
+            Assert.IsFalse(o1.Equals(o2));
+            Assert.IsFalse(o2.Equals(o1));
+            Assert.IsFalse(Osoba.Equals(o1, o2));
+            Assert.IsFalse(Osoba.ReferenceEquals(o1, o2));
         }
 
         [TestMethod]
@@ -38,12 +36,11 @@ namespace Vsite.CSharp.Testovi
         {
             Osoba o1 = new Osoba("Janko", 1);
             Osoba o2 = new Osoba("Janko", 2);
-            MetodaEqualsZaReferentniTip.UsporedbaOsoba(o1, o2);
-            Assert.AreEqual(o1.ToString(), ((Osoba)cw.GetObject()).ToString());
-            Assert.AreEqual(o2.ToString(), ((Osoba)cw.GetObject()).ToString());
-            Assert.IsFalse(cw.GetBoolean());
-            Assert.IsFalse(cw.GetBoolean());
-            Assert.IsFalse(cw.GetBoolean());
+
+            Assert.IsFalse(o1.Equals(o2));
+            Assert.IsFalse(o2.Equals(o1));
+            Assert.IsFalse(Osoba.Equals(o1, o2));
+            Assert.IsFalse(Osoba.ReferenceEquals(o1, o2));
         }
 
         [TestMethod]
@@ -51,12 +48,10 @@ namespace Vsite.CSharp.Testovi
         {
             Osoba o1 = new Osoba("Janko", 1);
             Osoba o2 = null;
-            MetodaEqualsZaReferentniTip.UsporedbaOsoba(o1, o2);
-            Assert.AreEqual(o1.ToString(), ((Osoba)cw.GetObject()).ToString());
-            Assert.IsNull(cw.GetObject());
-            Assert.IsFalse(cw.GetBoolean());
-            cw.GetString();
-            Assert.IsFalse(cw.GetBoolean());
+
+            Assert.IsFalse(o1.Equals(o2));
+            Assert.IsFalse(Osoba.Equals(o1, o2));
+            Assert.IsFalse(Osoba.ReferenceEquals(o1, o2));
         }
 
         [TestMethod]
@@ -64,12 +59,11 @@ namespace Vsite.CSharp.Testovi
         {
             Osoba o1 = new Osoba("Janko", 1);
             Osoba o2 = new Osoba("Janko", 1);
-            MetodaEqualsZaReferentniTip.UsporedbaOsoba(o1, o2);
-            Assert.AreEqual(o1.ToString(), ((Osoba)cw.GetObject()).ToString());
-            Assert.AreEqual(o2.ToString(), ((Osoba)cw.GetObject()).ToString());
-            Assert.IsTrue(cw.GetBoolean());
-            Assert.IsTrue(cw.GetBoolean());
-            Assert.IsFalse(cw.GetBoolean());
+
+            Assert.IsTrue(o1.Equals(o2));
+            Assert.IsTrue(o2.Equals(o1));
+            Assert.IsTrue(Osoba.Equals(o1, o2));
+            Assert.IsFalse(Osoba.ReferenceEquals(o1, o2));
         }
     }
 }
