@@ -8,7 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_", "_", "{E6E10ADA-753A-43
 		ReadMe.txt = ReadMe.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EqualsRefTip2", "EqualsRefTip2\EqualsRefTip2.csproj", "{1875DB6F-1083-4677-AFF7-C06701BE3386}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetodaEqualsZaIzvedeniReferentiTip", "EqualsRefTip2\MetodaEqualsZaIzvedeniReferentiTip.csproj", "{1875DB6F-1083-4677-AFF7-C06701BE3386}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EqualsVrijednTip", "EqualsVrijednTip\EqualsVrijednTip.csproj", "{53D14D11-8D55-4C13-AE4A-9AC78B5E8C96}"
 EndProject

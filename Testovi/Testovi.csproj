@@ -64,9 +64,9 @@
       <Project>{6393a475-21a0-4ad6-80e5-4975cbfa1ebf}</Project>
       <Name>Clone</Name>
     </ProjectReference>
-    <ProjectReference Include="..\EqualsRefTip2\EqualsRefTip2.csproj">
+    <ProjectReference Include="..\EqualsRefTip2\MetodaEqualsZaIzvedeniReferentiTip.csproj">
       <Project>{1875db6f-1083-4677-aff7-c06701be3386}</Project>
-      <Name>EqualsRefTip2</Name>
+      <Name>MetodaEqualsZaIzvedeniReferentiTip</Name>
     </ProjectReference>
     <ProjectReference Include="..\EqualsVrijednTip\EqualsVrijednTip.csproj">
       <Project>{53d14d11-8d55-4c13-ae4a-9ac78b5e8c96}</Project>

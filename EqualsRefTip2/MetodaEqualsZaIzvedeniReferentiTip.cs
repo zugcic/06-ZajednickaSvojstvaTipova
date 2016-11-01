@@ -14,9 +14,9 @@ namespace Vsite.CSharp
         string m_ime;       // član referentnog tipa
         int m_matičniBroj;  // član vrijednosnog tipa
 
-        public override bool Equals(object obj) 
+        public override bool Equals(object obj)
         {
-            // TODO: prekopirati kod metode Equals iz zadatka EqualsRefTip1
+            // TODO: prekopirati kod metode Equals iz zadatka MetodaEqualsReferentiTip
 
             return true;
         }
@@ -54,7 +54,7 @@ namespace Vsite.CSharp
         }
     }
 
-    class Program
+    public class MetodaEqualsZaIzvedeniReferentiTip
     {
         static void Main(string[] args)
         {
