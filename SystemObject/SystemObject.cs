@@ -2,37 +2,85 @@
 
 namespace Vsite.CSharp
 {
+    // TODO: Definirati klasu MojaKlasa bez ikakvih članova, samo s praznom definicijom.
     class MojaKlasa
     {
     }
 
-    class Program
+
+    public class SystemObject
     {
-        static void Main(string[] args)
+        public static void IspisToString()
         {
+            // TODO: Otkomentirati donje naredbe.
             MojaKlasa mk1 = new MojaKlasa();
             MojaKlasa mk2 = mk1;
             MojaKlasa mk3 = new MojaKlasa();
 
-            // metoda ToString
-            // TODO: za svaki objekt pozvati njegovu metodu ToString i ispisati na konzolu ono što ona vraća
+            // TODO: Za svaki objekt (mk1, mk2, mk3) pozvati njegovu metodu ToString i ispisati na konzolu ono što ona vraća.
+            Console.WriteLine(mk1.ToString());
+            Console.WriteLine(mk2.ToString());
+            Console.WriteLine(mk3.ToString());
+        }
 
+        public static void IspisGetType()
+        {
+            // TODO: Otkomentirati donje naredbe.
+            MojaKlasa mk1 = new MojaKlasa();
+            MojaKlasa mk2 = mk1;
+            MojaKlasa mk3 = new MojaKlasa();
 
-            // metoda GetType
-            // TODO: za svaki objekt pozvati njegovu metodu GetType i ispisati na konzolu ono što ona vraća
+            // TODO: Za svaki objekt (mk1, mk2, mk3) pozvati njegovu metodu GetType i ispisati na konzolu ono što ona vraća.
+            Console.WriteLine(mk1.GetType());
+            Console.WriteLine(mk2.GetType());
+            Console.WriteLine(mk3.GetType());
+        }
 
+        public static void IspisGetHashCode()
+        {
+            // TODO: Otkomentirati donje naredbe.
+            MojaKlasa mk1 = new MojaKlasa();
+            MojaKlasa mk2 = mk1;
+            MojaKlasa mk3 = new MojaKlasa();
 
-            // metoda GetHashCode
-            // TODO: za svaki objekt pozvati njegovu metodu GetHashCode i ispisati na konzolu ono što ona vraća
+            // TODO: Za svaki objekt (mk1, mk2, mk3) pozvati njegovu metodu GetHashCode i ispisati na konzolu ono što ona vraća.
+            Console.WriteLine(mk1.GetHashCode());
+            Console.WriteLine(mk2.GetHashCode());
+            Console.WriteLine(mk3.GetHashCode());
+        }
 
+        public static void IspisEquals()
+        {
+            // TODO: Otkomentirati donje naredbe.
+            MojaKlasa mk1 = new MojaKlasa();
+            MojaKlasa mk2 = mk1;
+            MojaKlasa mk3 = new MojaKlasa();
 
-            // metoda Equals
-            // TODO: za svaki objekt pozvati njegovu metodu Equals i usporedbu napraviti sa svim ostalim objektima te ispisati na konzolu ono što ona vraća
+            // TODO: Otkomentirati donje naredbe i ispisati na konzolu rezultate usporedbi.
+            Console.WriteLine(mk1.Equals(mk2));
+            Console.WriteLine(mk1.Equals(mk3));
+            Console.WriteLine(mk2.Equals(mk1));
+            Console.WriteLine(mk2.Equals(mk3));
+            Console.WriteLine(mk3.Equals(mk1));
+            Console.WriteLine(mk3.Equals(mk2));
+        }
 
+        static void Main(string[] args)
+        {
 
-            // TODO: ispise pohraniti u datoteku SystemObjects.txt priloženu projektu te u njoj obrazložiti rezultate za svaku metodu!
+            Console.WriteLine("Ispis ToString");
+            IspisToString();
 
+            Console.WriteLine("Ispis GetType");
+            IspisGetType();
 
+            Console.WriteLine("Ispis GetHashCode");
+            IspisGetHashCode();
+
+            Console.WriteLine("Ispis Equals");
+            IspisEquals();
+
+            Console.WriteLine("GOTOVO!!!");
             Console.ReadKey();
         }
     }

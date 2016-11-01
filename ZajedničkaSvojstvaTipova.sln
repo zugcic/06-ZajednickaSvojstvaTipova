@@ -52,6 +52,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "09", "09", "{E898883D-DF96-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10", "10", "{69242AC5-BDFE-46A1-BADE-2E23BDFDF82A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testovi", "Testovi\Testovi.csproj", "{F9B6700D-82F2-4A66-86D1-E77D4034534B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -102,6 +104,10 @@ Global
 		{4D4E139C-26A0-4C96-9CA6-73301BC213C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D4E139C-26A0-4C96-9CA6-73301BC213C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D4E139C-26A0-4C96-9CA6-73301BC213C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9B6700D-82F2-4A66-86D1-E77D4034534B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9B6700D-82F2-4A66-86D1-E77D4034534B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9B6700D-82F2-4A66-86D1-E77D4034534B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9B6700D-82F2-4A66-86D1-E77D4034534B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
