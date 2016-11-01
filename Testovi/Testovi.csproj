@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="ConsoleTest.cs" />
     <Compile Include="TestEquals.cs" />
+    <Compile Include="TestEqualsZaIzvedeniReferentiTip.cs" />
     <Compile Include="TestEqualsZaReferentniTip.cs" />
     <Compile Include="TestSystemObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -45,6 +45,12 @@
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MetodaEqualsZaReferentiTip\MetodaEqualsZaReferentniTip.csproj">
+      <Project>{a5735ba2-18f0-4143-9f8f-3dc4dc3148bb}</Project>
+      <Name>MetodaEqualsZaReferentniTip</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

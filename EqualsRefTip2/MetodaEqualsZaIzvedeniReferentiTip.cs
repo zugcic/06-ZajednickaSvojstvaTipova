@@ -3,31 +3,37 @@ using System.Diagnostics;
 
 namespace Vsite.CSharp
 {
-    class Osoba
-    {
-        public Osoba(string ime, int matičniBroj)
-        {
-            m_ime = ime;
-            m_matičniBroj = matičniBroj;
-        }
+    //public class Osoba
+    //{
+    //    public Osoba(string ime, int matičniBroj)
+    //    {
+    //        m_ime = ime;
+    //        m_matičniBroj = matičniBroj;
+    //    }
 
-        string m_ime;       // član referentnog tipa
-        int m_matičniBroj;  // član vrijednosnog tipa
+    //    string m_ime;       // član referentnog tipa
+    //    int m_matičniBroj;  // član vrijednosnog tipa
 
-        public override bool Equals(object obj)
-        {
-            // TODO: prekopirati kod metode Equals iz zadatka MetodaEqualsReferentiTip
+    //    // TODO: prekopirati kod metode Equals iz zadatka MetodaEqualsReferentiTip
+    //    public override bool Equals(object obj)
+    //    {
+    //        if (obj == null)
+    //            return false;
+    //        if (obj.GetType() != GetType())
+    //            return false;
+    //        Osoba druga = (Osoba)obj;
+    //        if (!Osoba.Equals(m_ime, druga.m_ime))
+    //            return false;
+    //        return m_matičniBroj.Equals(druga.m_matičniBroj);
+    //    }
 
-            return true;
-        }
+    //    public override string ToString()
+    //    {
+    //        return string.Format("'{0}, {1}'", m_ime, m_matičniBroj);
+    //    }
+    //}
 
-        public override string ToString()
-        {
-            return string.Format("'{0}, {1}'", m_ime, m_matičniBroj);
-        }
-    }
-
-    class Student : Osoba
+    public class Student : Osoba
     {
         public Student(string ime, int matičniBroj, string smjer, int godina) : base(ime, matičniBroj)
         {
@@ -38,14 +44,15 @@ namespace Vsite.CSharp
         string m_smjer;
         int m_godina;
 
+        // TODO: Pregaziti (override) metodu Equals da uključi dodatne usporedbe da bi studenti bili jednaki samo ako su na istom smjeru i godini.
         public override bool Equals(object obj) 
         {
             if (!base.Equals(obj)) // prvo pozivamo Equals baznog tipa
                 return false;
-            // TODO: dodati potrebne usporedbe da bi studenti bili jednaki samo ako su na istom smjeru i godini
-            // (za ispravnu implementaciju bi metoda Main trebala proći bez problema)
-
-            return true;  
+            Student drugi = (Student)obj;
+            if (!string.Equals(m_smjer, drugi.m_smjer))
+                return false;
+            return m_godina.Equals(drugi.m_godina);  
         }
 
         public override string ToString()
@@ -56,25 +63,53 @@ namespace Vsite.CSharp
 
     public class MetodaEqualsZaIzvedeniReferentiTip
     {
+        public static void UsporedbaStudenata(Student studentA, Student studentB)
+        {
+            Console.WriteLine(studentA);
+            Console.WriteLine(studentB);
+
+            try
+            {
+                Console.WriteLine(studentA.Equals(studentB));
+            }
+            catch (NullReferenceException)
+            {
+                Console.WriteLine("POGREŠKA: studentA je null referenca pa nema metodu Equals!");
+            }
+            try
+            {
+                Console.WriteLine(studentB.Equals(studentA));
+            }
+            catch (NullReferenceException)
+            {
+                Console.WriteLine("POGREŠKA: studentB je null referenca pa nema metodu Equals!");
+            }
+
+            Console.WriteLine(Osoba.ReferenceEquals(studentA, studentB));
+
+        }
+
         static void Main(string[] args)
         {
             // dva različita studenta
             Student studentA = new Student("Janko", 1, "Programiranje", 3);
             Student studentB = new Student("Darko", 2, "Administriranje", 2);
-            Debug.Assert(Student.Equals(studentA, studentB) == false);
+
+            UsporedbaStudenata(studentA, studentB);
 
             // novi "Janko" s istim matičnim brojem, isti smjer i godina
             studentB = new Student("Janko", 1, "Programiranje", 3);
-            Debug.Assert(Student.Equals(studentA, studentB) == true);
+            UsporedbaStudenata(studentA, studentB);
 
             // "Janko", ali na drugoj godini
             studentB = new Student("Janko", 1, "Programiranje", 2);
-            Debug.Assert(Student.Equals(studentA, studentB) == false);
+            UsporedbaStudenata(studentA, studentB);
 
             studentA = studentB;
-            Debug.Assert(Student.Equals(studentA, studentB) == true);
+            UsporedbaStudenata(studentA, studentB);
 
-            Console.ReadLine();
+            Console.WriteLine("GOTOVO!!!");
+            Console.ReadKey();
         }
     }
 }
