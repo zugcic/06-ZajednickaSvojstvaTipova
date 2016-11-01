@@ -6,7 +6,7 @@ using System.Diagnostics;
 
 namespace Vsite.CSharp
 {
-    struct KompleksniBroj
+    public struct KompleksniBroj
     {
         public KompleksniBroj(double realni, double imaginarni)
         {
@@ -17,30 +17,57 @@ namespace Vsite.CSharp
         public double Realni;
         public double Imaginarni;
 
-        // TODO: Implementirati metodu ToString tako da vraća niz u obliku: "2+3j"
+        // TODO: Pregaziti (override) metodu ToString tako da vraća niz u obliku: "2+3j", "2-j", "0", "j", "-j"
         // (ako je implementacija ispravna, metoda Main bi se trebala izvesti bez problema)
+        public override string ToString()
+        {
+            if (Imaginarni == 0)
+                return Realni.ToString();
+            if (Realni == 0)
+                return FormatirajImaginarni();
+            if (Imaginarni < 0)
+                return string.Format("{0}{1}", Realni, FormatirajImaginarni());
+            return string.Format("{0}+{1}", Realni, FormatirajImaginarni());
+        }
 
-
+        private string FormatirajImaginarni()
+        {
+            if (Imaginarni == 1)
+                return "j";
+            if (Imaginarni == -1)
+                return "-j";
+            return string.Format("{0}j", Imaginarni);
+        }
     }
 
-    class Program
+    class ToString
     {
         static void Main(string[] args)
         {
             KompleksniBroj kb = new KompleksniBroj(2, 3);
-            Debug.Assert(kb.ToString() == "2+3j");
+            Console.WriteLine(kb); // "2+3j"
 
             kb.Imaginarni = -3;
-            Debug.Assert(kb.ToString() == "2-3j");
+            Console.WriteLine(kb); // "2-3j"
 
             kb.Realni = 0;
-            Debug.Assert(kb.ToString() == "-3j");
+            Console.WriteLine(kb); // "-3j"
 
             kb.Imaginarni = 0;
-            Debug.Assert(kb.ToString() == "0");
+            Console.WriteLine(kb); // "0"
 
+            kb.Imaginarni = 1;
+            Console.WriteLine(kb); // "j"
+
+            kb.Imaginarni = -1;
+            Console.WriteLine(kb); // "-j"
+
+            kb.Imaginarni = 0;
             kb.Realni = -2;
-            Debug.Assert(kb.ToString() == "-2");
+            Console.WriteLine(kb); // "-2"
+
+            Console.WriteLine("GOTOVO!!!");
+            Console.ReadKey();
         }
     }
 }
