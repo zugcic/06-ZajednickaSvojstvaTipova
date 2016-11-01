@@ -9,7 +9,7 @@
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Vsite.CSharp</RootNamespace>
-    <AssemblyName>EqualsRefTip1</AssemblyName>
+    <AssemblyName>MetodaEqualsZaReferentniTip</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>

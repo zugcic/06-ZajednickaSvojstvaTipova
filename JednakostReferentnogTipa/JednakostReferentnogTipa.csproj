@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1875DB6F-1083-4677-AFF7-C06701BE3386}</ProjectGuid>
+    <ProjectGuid>{22C2E2F5-1CF7-421D-8481-6591F17B1224}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Vsite.CSharp</RootNamespace>
-    <AssemblyName>EqualsRefTip2</AssemblyName>
+    <AssemblyName>JednakostReferentnogTipa</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -39,7 +39,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="MetodaEqualsZaIzvedeniReferentiTip.cs" />
+    <Compile Include="JednakostReferentnogTipa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

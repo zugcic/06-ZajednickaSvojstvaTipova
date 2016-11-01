@@ -9,16 +9,16 @@ izravno iz baznog System.Object tipa.
 
 ToString
 --------
-Primjer gaženja metode ToString
+Primjer gaženja (override) metode ToString
 
 
-Equals
-------
+MetodaEquals
+------------
 Ilustrira razliku izmeðu statièke i nestatièke metode Equals.
 
 
-EqualsRefTip1
--------------
+MetodaEqualsZaReferentniTip
+---------------------------
 Primjer gaženja (override) metode Equals za referentni tip koji je
 izveden izravno iz System.Object.
 Klasa Osoba sadrži jedno polje referentnog tipa (string m_ime) i jedno
@@ -27,25 +27,25 @@ dva objekta tipa Osoba jednaka ako imaju isto ime i isti matièni broj.
 (Prekrili smo i metodu ToString da bismo dobili ljepši ispis).
 
 
-EqualsRefTip2
--------------
+MetodaEqualsZaIzvedeniReferentiTip
+----------------------------------
 Klasa Student je izvedena iz klase Osoba - njena metoda Equals mora
 pozvati Equals bazne klase + napraviti usporedbu polja koja su specifièna
 za izvedenu klasu.
 
 
-EqualsVrijednTip
-----------------
-Primjer prekrivanja metode Equals za vrijednosni tip.
+MetodaEqualsZaVrijednosniTip
+----------------------------
+Primjer implementacije metode Equals za vrijednosni tip.
 
 
-UsporedbaRef
-------------
+JednakostReferentnogTipa
+------------------------
 Primjer implementacije operatora == i != za referentni tip.
 
 
-UsporedbaVrijedn
-----------------
+JednakostVrijednogTipa
+----------------------
 Primjer implementacije operatora == i != za vrijednosni tip.
 
 
