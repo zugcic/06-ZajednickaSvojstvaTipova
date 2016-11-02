@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Clone")]
+[assembly: AssemblyTitle("MetodaEqualsZaVrijednosniTip")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Envox Lab")]
-[assembly: AssemblyProduct("Clone")]
-[assembly: AssemblyCopyright("Copyright © Envox Lab 2008")]
+[assembly: AssemblyCompany("VSITe")]
+[assembly: AssemblyProduct("MetodaEqualsZaVrijednosniTip")]
+[assembly: AssemblyCopyright("Copyright © VSITe 2008")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("ae8aaaab-5dbc-494e-be0d-01e06b06125b")]
+[assembly: Guid("a1d8e7c3-378b-451e-ae39-077e799c54e5")]
 
 // Version information for an assembly consists of the following four values:
 //

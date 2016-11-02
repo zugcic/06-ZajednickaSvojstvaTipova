@@ -53,9 +53,11 @@
   </Choose>
   <ItemGroup>
     <Compile Include="ConsoleTest.cs" />
+    <Compile Include="TestClone.cs" />
     <Compile Include="TestEquals.cs" />
     <Compile Include="TestEqualsZaIzvedeniReferentiTip.cs" />
     <Compile Include="TestEqualsZaReferentniTip.cs" />
+    <Compile Include="TestGetHashCode.cs" />
     <Compile Include="TestJednakostiReferentnogTipa.cs" />
     <Compile Include="TestJednakostiVrijednosnogTipa.cs" />
     <Compile Include="TestMetodeEqualsZaVrijednosniTip.cs" />
@@ -64,14 +66,6 @@
     <Compile Include="TestToString.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Clone\Clone.csproj">
-      <Project>{6393a475-21a0-4ad6-80e5-4975cbfa1ebf}</Project>
-      <Name>Clone</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EqualsVrijednTip\MetodaEqualsZaVrijednosniTip.csproj">
-      <Project>{53d14d11-8d55-4c13-ae4a-9ac78b5e8c96}</Project>
-      <Name>MetodaEqualsZaVrijednosniTip</Name>
-    </ProjectReference>
     <ProjectReference Include="..\GetHashCodeString\GetHashCodeString.csproj">
       <Project>{ed5914b2-9512-4ebe-a101-9e0138224c8b}</Project>
       <Name>GetHashCodeString</Name>
@@ -88,6 +82,10 @@
       <Project>{cfd69d9e-a2de-4a63-ac43-e95a85f004a7}</Project>
       <Name>JednakostVrijednogTipa</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MetodaClone\MetodaClone.csproj">
+      <Project>{6393a475-21a0-4ad6-80e5-4975cbfa1ebf}</Project>
+      <Name>MetodaClone</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MetodaEqualsZaIzvedeniReferentiTip\MetodaEqualsZaIzvedeniReferentiTip.csproj">
       <Project>{1875db6f-1083-4677-aff7-c06701be3386}</Project>
       <Name>MetodaEqualsZaIzvedeniReferentiTip</Name>
@@ -95,6 +93,10 @@
     <ProjectReference Include="..\MetodaEqualsZaReferentiTip\MetodaEqualsZaReferentniTip.csproj">
       <Project>{a5735ba2-18f0-4143-9f8f-3dc4dc3148bb}</Project>
       <Name>MetodaEqualsZaReferentniTip</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetodaEqualsZaVrijednosniTip\MetodaEqualsZaVrijednosniTip.csproj">
+      <Project>{53d14d11-8d55-4c13-ae4a-9ac78b5e8c96}</Project>
+      <Name>MetodaEqualsZaVrijednosniTip</Name>
     </ProjectReference>
     <ProjectReference Include="..\MetodaEquals\MetodaEquals.csproj">
       <Project>{9ad36fc9-11ee-4be5-a4eb-07c3566aff5e}</Project>

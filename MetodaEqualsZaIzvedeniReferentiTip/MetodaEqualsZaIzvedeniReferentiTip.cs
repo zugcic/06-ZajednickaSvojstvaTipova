@@ -19,15 +19,8 @@ namespace Vsite.CSharp
 
 
         // TODO: Pregaziti (override) metodu Equals(object) tako da poziva metodu Equals(Student).
-        public override bool Equals(object obj) 
-        {
-            if (!base.Equals(obj)) // prvo pozivamo Equals baznog tipa
-                return false;
-            Student drugi = (Student)obj;
-            if (!string.Equals(m_smjer, drugi.m_smjer))
-                return false;
-            return m_godina.Equals(drugi.m_godina);  
-        }
+
+
 
         public override string ToString()
         {

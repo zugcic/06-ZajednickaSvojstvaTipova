@@ -3,37 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace GetHashCode
+namespace Vsite.CSharp
 {
-    class Osoba
-    {
-        public Osoba(string ime, int matičniBroj)
-        {
-            m_ime = ime;
-            m_matičniBroj = matičniBroj;
-        }
+    // TODO: Pokrenuti program i provjeriti ispis.
 
-        string m_ime;       // član referentnog tipa
-        int m_matičniBroj;  // član vrijednosnog tipa
-
-
-        public override bool Equals(object obj)
-        {
-            // TODO: Prekopirati implementaciju metode Equals iz EqualsRefTip1
-
-
-            return true;
-        }
-
-        // TODO: Implementirati metodu GetHashCode tako da se metoda Main može izvesti bez problema
-
-        
-        
-        public override string ToString()
-        {
-            return string.Format("'{0}, {1}'", m_ime, m_matičniBroj);
-        }
-    }
+    // TODO: Implementirati metodu GetHashCode u klasi Osoba iz projekta MetodaEqualsZaReferentiTip tako da se metoda Main može izvesti bez problema
 
     class Program
     {
@@ -48,6 +22,7 @@ namespace GetHashCode
             Console.WriteLine(mjestaRođenja[new Osoba("Janko", 2)]);
             Console.WriteLine(mjestaRođenja[new Osoba("Darko", 3)]);
 
+            Console.WriteLine("GOTOVO!!!");
             Console.ReadKey();
 
         }

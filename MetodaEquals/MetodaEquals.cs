@@ -18,16 +18,16 @@ namespace Vsite.CSharp
             MojaKlasa mk2 = null;
 
             // TODO: Usporediti objekte mk1 i mk2 korištenjem statičke metode MojaKlasa.Equals te ispisati rezultat
-            Console.WriteLine(MojaKlasa.Equals(mk1, mk2));
+
 
             // TODO: Usporediti reference na objekte mk1 i mk2 korištenjem statičke metode MojaKlasa.ReferenceEquals te ispisati rezultat
-            Console.WriteLine(MojaKlasa.ReferenceEquals(mk1, mk2));
+
 
             // TODO: Usporediti objekte mk1 i mk2 pozivom metode mk1.Equals te ispisati rezultat
-            Console.WriteLine(mk1.Equals(mk2));
+
             
             // TODO: Usporediti objekte mk1 i mk2 pozivom metode mk2.Equals te ispisati rezultat
-            Console.WriteLine(mk2.Equals(mk1));
+
 
         }
 

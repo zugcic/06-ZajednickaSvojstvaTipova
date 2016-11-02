@@ -19,17 +19,8 @@ namespace Vsite.CSharp
 
 
         // TODO: Pregaziti (override) metodu Equals(object) tako da poziva Equals(Osoba)
-        public override bool Equals(object obj)
-        {
-            if (obj == null)
-                return false;
-            if (obj.GetType() != GetType())
-                return false;
-            Osoba druga = (Osoba)obj;
-            if (!Osoba.Equals(m_ime, druga.m_ime))
-                return false;
-            return m_matičniBroj.Equals(druga.m_matičniBroj);
-        }
+
+
 
         public override string ToString()
         {

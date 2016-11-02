@@ -9,7 +9,7 @@
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Vsite.CSharp</RootNamespace>
-    <AssemblyName>UsporedbaVrijedn</AssemblyName>
+    <AssemblyName>JednakostVrijednogTipa</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -46,7 +46,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EqualsVrijednTip\MetodaEqualsZaVrijednosniTip.csproj">
+    <ProjectReference Include="..\MetodaEqualsZaVrijednosniTip\MetodaEqualsZaVrijednosniTip.csproj">
       <Project>{53d14d11-8d55-4c13-ae4a-9ac78b5e8c96}</Project>
       <Name>MetodaEqualsZaVrijednosniTip</Name>
     </ProjectReference>

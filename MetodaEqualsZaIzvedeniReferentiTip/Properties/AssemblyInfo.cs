@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("EqualsRefTip2")]
+[assembly: AssemblyTitle("MetodaEqualsZaIzvedeniReferentiTip")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Envox Lab")]
-[assembly: AssemblyProduct("EqualsRefTip2")]
-[assembly: AssemblyCopyright("Copyright © Envox Lab 2008")]
+[assembly: AssemblyCompany("VSITe")]
+[assembly: AssemblyProduct("MetodaEqualsZaIzvedeniReferentiTip")]
+[assembly: AssemblyCopyright("Copyright © VSITe 2008")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
