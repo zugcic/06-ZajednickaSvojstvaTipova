@@ -5,40 +5,40 @@ namespace Vsite.CSharp
 {
     // TODO: U klasi Osoba iz projekta MetodaEqualsZaReferentiTip definirati operatore == i != tako da donji primjeri daju očekivane rezultate.
 
-    public class JednakostReferentnogTipa
+    class JednakostReferentnogTipa
     {
+        static void Jednakost(Osoba osobaA, Osoba osobaB)
+        {
+            Console.WriteLine(string.Format("{0} == {1}: {2}", osobaA, osobaB, osobaA == osobaB));
+            Console.WriteLine(string.Format("{0} != {1}: {2}", osobaA, osobaB, osobaA != osobaB));
+        }
+
         static void Main(string[] args)
         {
-            // dvije osobe s različitim imenima i MB
             Osoba osobaA = new Osoba("Janko", 1);
-            Osoba osobaB = new Osoba("Darko", 2);
-            Debug.Assert((osobaA == osobaB) == false);
-            Debug.Assert(osobaA != osobaB);
-
-            // novi "Janko" s drugim matičnim brojem
-            osobaB = new Osoba("Janko", 2);
-            Debug.Assert((osobaA == osobaB) == false);
-            Debug.Assert(osobaA != osobaB);
+            Osoba osobaB = osobaA;
+            Jednakost(osobaA, osobaB);
 
             // novi "Janko" s istim matičnim brojem
             osobaB = new Osoba("Janko", 1);
-            Debug.Assert(osobaA == osobaB);
-            Debug.Assert((osobaA != osobaB) == false);
+            Jednakost(osobaA, osobaB);
 
-            osobaB = osobaA;
-            Debug.Assert(osobaA == osobaB);
-            Debug.Assert((osobaA != osobaB) == false);
+            // novi "Janko" s drugim matičnim brojem
+            osobaB = new Osoba("Janko", 2);
+            Jednakost(osobaA, osobaB);
+
+            // dvije osobe s različitim imenima i MB
+            osobaB = new Osoba("Darko", 2);
+            Jednakost(osobaA, osobaB);
 
             osobaB = null;
-            Debug.Assert((osobaA == osobaB) == false);
-            Debug.Assert(osobaA != osobaB);
+            Jednakost(osobaA, osobaB);
 
             osobaA = null;
-            Debug.Assert(osobaA == osobaB);
-            Debug.Assert((osobaA != osobaB) == false);
+            Jednakost(osobaA, osobaB);
 
-
-            Console.ReadLine();
+            Console.WriteLine("GOTOVO!!!");
+            Console.ReadKey();
         }
     }
 }
