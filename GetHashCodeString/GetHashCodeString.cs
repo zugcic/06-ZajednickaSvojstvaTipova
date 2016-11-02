@@ -6,15 +6,15 @@ namespace Vsite.CSharp
     {
         static void Main(string[] args)
         {
-            // TODO: Pokrenuti program i ispis preslikati u datoteku GetHashCodeString.txt pridruženu projektu
-            // U datoteci navesti koja dva znakovan niza daju najbliže brojeve
+            // TODO: Pokrenuti program i usporediti ispise. Koja dva znakovna niza daju najbliže brojeve?
 
-            Console.WriteLine("cat".GetHashCode());
-            Console.WriteLine("cta".GetHashCode());
-            Console.WriteLine("cap".GetHashCode());
-            Console.WriteLine("car".GetHashCode());
-            Console.WriteLine("cut".GetHashCode());
+            Console.WriteLine(string.Format("cat.GetHashCode() = {0}", "cat".GetHashCode()));
+            Console.WriteLine(string.Format("cta.GetHashCode() = {0}", "cta".GetHashCode()));
+            Console.WriteLine(string.Format("cap.GetHashCode() = {0}", "cap".GetHashCode()));
+            Console.WriteLine(string.Format("car.GetHashCode() = {0}", "car".GetHashCode()));
+            Console.WriteLine(string.Format("cut.GetHashCode() = {0}", "cut".GetHashCode()));
 
+            Console.WriteLine("GOTOVO!!!");
             Console.ReadKey();
         }
     }
