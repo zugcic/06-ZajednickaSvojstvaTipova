@@ -1,26 +1,18 @@
 ﻿using System;
-using System.Diagnostics;
 
 namespace Vsite.CSharp
 {
     using Osoba = Vsite.CSharp.MetodaEqualsZaVrijednosniTip.Osoba;
 
-    // TODO: Strukturi Osoba u projektu MetodaEqualsZaVrijednosniTip definirati operatore == i != tako da donji primjeri daju očekivane rezultate.
-
     public class JednakostVrijednogTipa
     {
-        public static bool JednakiSu(Osoba osobaA, Osoba osobaB)
+        public static void Jednakost(Osoba osobaA, Osoba osobaB)
         {
-            // TODO: Otkomentirati donju naredbu.
-            //return osobaA == osobaB;
-            return false;
-        }
+            // TODO: Otkomentirati donje naredbe i provjeriti može li se kod prevesti i izvesti.
+            //Console.WriteLine(string.Format("{0} == {1}: {2}", osobaA, osobaB, osobaA == osobaB));
+            //Console.WriteLine(string.Format("{0} != {1}: {2}", osobaA, osobaB, osobaA != osobaB));
 
-        public static bool RazličitiSu(Osoba osobaA, Osoba osobaB)
-        {
-            // TODO: Otkomentirati donju naredbu.
-            //return osobaA != osobaB;
-            return false;
+            // TODO: Strukturi Osoba u projektu MetodaEqualsZaVrijednosniTip definirati operatore == i != tako da donji primjeri daju očekivane rezultate.
         }
 
         static void Main(string[] args)
@@ -28,27 +20,20 @@ namespace Vsite.CSharp
 
             // dvije osobe s različitim imenima i MB
             Osoba osobaA = new Osoba("Janko", 1);
-            Osoba osobaB = new Osoba("Darko", 2);
-            Console.WriteLine(JednakiSu(osobaA, osobaB));
-            //Debug.Assert((osobaA == osobaB) == false);
-            //Debug.Assert(osobaA != osobaB);
+            Osoba osobaB = osobaA;
+            Jednakost(osobaA, osobaB);
 
-            // preslika osobe A
-            osobaB = osobaA;
-            //Debug.Assert(osobaA == osobaB);
-            //Debug.Assert((osobaA != osobaB) == false);
-
-            // novi "Janko" s istim matičnim brojem
             osobaB = new Osoba("Janko", 1);
-            //Debug.Assert(osobaA == osobaB);
-            //Debug.Assert((osobaA != osobaB) == false);
+            Jednakost(osobaA, osobaB);
 
-            // "Janko", ali s drugim matičnim brojem
+            osobaB = new Osoba("Darko", 2);
+            Jednakost(osobaA, osobaB);
+
             osobaB = new Osoba("Janko", 2);
-            //Debug.Assert((osobaA == osobaB) == false);
-            //Debug.Assert(osobaA != osobaB);
+            Jednakost(osobaA, osobaB);
 
-            Console.ReadLine();
+            Console.WriteLine("GOTOVO!!!");
+            Console.ReadKey();
         }
     }
 }

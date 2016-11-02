@@ -57,6 +57,7 @@
     <Compile Include="TestEqualsZaIzvedeniReferentiTip.cs" />
     <Compile Include="TestEqualsZaReferentniTip.cs" />
     <Compile Include="TestJednakostiReferentnogTipa.cs" />
+    <Compile Include="TestJednakostiVrijednosnogTipa.cs" />
     <Compile Include="TestMetodeEqualsZaVrijednosniTip.cs" />
     <Compile Include="TestSystemObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
