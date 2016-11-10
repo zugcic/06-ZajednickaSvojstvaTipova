@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Diagnostics;
 
+//objekti se uspoređuju po referencama a strukture po vrijednostima	(sadržaju)
+
+//ako se uspoređuju vrijednosti u objektima onda se overrida metoda Equals()
+
 namespace Vsite.CSharp
 {
     // TODO: Definirati da klasa Osoba implementira sučelje IEquatable<Osoba>
@@ -18,6 +22,8 @@ namespace Vsite.CSharp
         // TODO: Implementirati metodu Equals(Osoba) iz sučelja IEquatable<Osoba> tako da za osobe s istim imenom i istim matičnim brojem rezultat bude true
         public bool Equals(Osoba other)
         {
+			if (other == null)
+				return false;
             if (m_matičniBroj != other.m_matičniBroj)
                 return false;
             return object.Equals(m_ime,other.m_ime);
