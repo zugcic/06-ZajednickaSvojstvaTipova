@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Vsite.CSharp
+namespace Vsite.CSharp			  //DZ - napraviti za vrijednosne tippve
 {
     using Osoba = Vsite.CSharp.MetodaEqualsZaVrijednosniTip.Osoba;
 

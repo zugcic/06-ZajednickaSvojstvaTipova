@@ -1,5 +1,6 @@
 ﻿using System;
-
+//HashCode -> u Hash tablicu spremmo objekte sa ključem, ključ je broj koji generira HashCode()
+//pretraživanje u Hash Tablici ide po inetegeru
 namespace Vsite.CSharp
 {
     class Program
