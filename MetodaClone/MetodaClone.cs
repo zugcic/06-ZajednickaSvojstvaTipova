@@ -14,8 +14,8 @@ namespace Vsite.CSharp
         {
             Osoba osobaA = new Osoba("Janko", 1);
             Osoba osobaB = osobaA;
-            // TODO: Otkomentirati donju naredbu i provjeriti ispravnost implementacije metode Clone donjim programom
-            //osobaB = osobaA.Clone();
+            // Otkomentirati donju naredbu i provjeriti ispravnost implementacije metode Clone donjim programom
+            osobaB = (Osoba)osobaA.Clone();
             Console.WriteLine(string.Format("{0} ReferenceEquals( {1} ): {2}", osobaA, osobaB, Osoba.ReferenceEquals(osobaA, osobaB)));
             Console.WriteLine(string.Format("{0} == {1}: {2}", osobaA, osobaB, osobaA == osobaB));
             Console.WriteLine(string.Format("{0} != {1}: {2}", osobaA, osobaB, osobaA != osobaB));
