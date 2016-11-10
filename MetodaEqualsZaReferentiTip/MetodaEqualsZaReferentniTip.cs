@@ -41,8 +41,21 @@ namespace Vsite.CSharp
             return Equals((Osoba)obj);
         }
 
+		public static bool operator ==(Osoba a,Osoba b) {
 
-        public override string ToString()
+			return Osoba.Equals(a,b);//statička metoda (jer se uspoređuje po referencama) koja uspoređuje dva objekta
+									 //zovemo Equals jer može biti null, umjesto a.Equals(b);
+		}
+
+		public static bool operator !=(Osoba a, Osoba b)  //ako definiramo == moramo definirati i !=(različito)
+		{
+
+			return !(a==b);
+
+		}
+
+
+		public override string ToString()
         {
             return string.Format("'{0}, {1}'", m_ime, m_matičniBroj);
         }
