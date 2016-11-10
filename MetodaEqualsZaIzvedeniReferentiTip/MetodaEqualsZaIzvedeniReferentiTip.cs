@@ -4,7 +4,7 @@ using System.Diagnostics;
 namespace Vsite.CSharp
 {
     // TODO:  Definirati da klasa Student implementira sučelje IEquatable<Student>
-    public class Student : Osoba
+    public class Student : Osoba, IEquatable<Student> // Equals vraća bool i uspoređuje objekt tipa osoba i sturkturu tipa Student
     {
         public Student(string ime, int matičniBroj, string smjer, int godina) : base(ime, matičniBroj)
         {
@@ -26,7 +26,27 @@ namespace Vsite.CSharp
         {
             return string.Format("{0} ({1} {2}.godina)", base.ToString(), m_smjer, m_godina);
         }
-    }
+
+		public bool Equals(Student other)
+		{
+			//if (other == null)
+			//	return false;
+			if (!base.Equals(other))
+				return false;
+			if (m_godina != other.m_godina)
+				return false;
+			return object.Equals(m_smjer, other.m_smjer);
+		
+		}
+		public override bool Equals(object obj)
+		{
+			if (obj == null)	//uvijek prvo projeravamo dali je null referenca
+				return false;
+			if (GetType() != obj.GetType()) //provjera dali je istog tipa
+				return false;
+			return Equals((Student)obj);
+		}
+	}
 
     public class MetodaEqualsZaIzvedeniReferentiTip
     {
